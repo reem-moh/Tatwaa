@@ -17,7 +17,7 @@ class AgencyFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->title(),
+            'name' => $this->faker->word(),
             'description' => $this->faker->sentence(),
             'volunteerNumber' => $this->faker->biasedNumberBetween(1, 8),
         ];

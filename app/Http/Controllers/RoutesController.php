@@ -36,7 +36,7 @@ class RoutesController extends Controller
             $request,
             [
                 'fullname' => 'required|min:3',
-                'email' => 'required|email:rfc,dns',
+                'email' => 'required',
                 'mobile' => 'required|regex:/(05)[0-9]{8}/|max:10',
             ]
 

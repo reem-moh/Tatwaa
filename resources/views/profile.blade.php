@@ -4,11 +4,11 @@
         <div class=" p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg " style="direction: rtl;">
 
             <section>
-                <p class=" px-4   mb-4 display-6 fw-bold">
+                <p class=" px-4   mb-4 display-7 fw-bold">
                     معلومات الشخصيه
                 </p>
 
-                <div class="album py-5 bg-light">
+                <div class="album py-5 bg-light border-bottom mb-4">
                     <div class="container">
 
                         <div class="row">
@@ -22,10 +22,10 @@
 
                             </div>
                             <div class="col-md-4">
-                                <div class="card mb-4 ">
+                                <div class="card mb-4  pe-lg-3 ">
                                     <p>
                                         @php
-                                         echo auth()->user()->name;
+                                            echo auth()->user()->name;
                                         @endphp
                                     </p>
 
@@ -45,10 +45,10 @@
 
                             </div>
                             <div class="col-md-4">
-                                <div class="card mb-4 ">
+                                <div class="card mb-4  pe-lg-3 ">
                                     <p>
                                         @php
-                                         echo auth()->user()->email;
+                                            echo auth()->user()->email;
                                         @endphp
                                     </p>
 
@@ -68,10 +68,10 @@
 
                             </div>
                             <div class="col-md-4">
-                                <div class="card mb-4 ">
+                                <div class="card mb-4  pe-lg-3 ">
                                     <p>
                                         @php
-                                         echo auth()->user()->mobile;
+                                            echo auth()->user()->mobile;
                                         @endphp
                                     </p>
 
@@ -85,9 +85,12 @@
             </section>
 
             <section>
-                <p class="display-6 fw-bold lh-1 px-4  my-2 " id="Volunteer">
+                @if (!Empty($agencies))
+                <p class="display-7 fw-bold lh-1 px-4  my-2 " id="Volunteer">
                     التطوعات السابقه
                 </p>
+                @endif
+
                 <div class="album py-5 bg-light">
                     <div class="container">
 

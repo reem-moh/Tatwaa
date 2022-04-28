@@ -23,7 +23,7 @@
                         </li>
                     @endif
                 @else
-                    <li class="nav-item dropdown" >
+                    <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
@@ -33,12 +33,12 @@
                             <a class="dropdown-item" href="{{ route('profile') }}">
                                 الصفحة الشخصيه
                             </a>
-                           
-                           <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
-                               تسجيل الخروج
+
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                تسجيل الخروج
                             </a>
-                            
+
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
@@ -49,10 +49,11 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
+                <!--
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('contactus') }}">تواصل معنا</a>
                 </li>
-
+            -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>

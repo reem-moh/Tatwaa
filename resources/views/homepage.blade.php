@@ -7,7 +7,7 @@
             {{ session()->get('success') }}
         </div>
     @endif
-    
+
     @if (session()->has('sorry'))
         <div class="alert alert-info">
             {{ session()->get('sorry') }}
@@ -107,9 +107,11 @@
 
                 <br />
                 <br />
-                <div class="d-grid gap-1 d-sm-flex justify-content-sm-center mb-5">
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">سجل كمنشئة</button>
-                </div>
+                <!--
+                    <div class="d-grid gap-1 d-sm-flex justify-content-sm-center mb-5">
+                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">سجل كمنشئة</button>
+                    </div>
+                -->
                 <div class="overflow-hidden" style="max-height: 30vh;">
                 </div>
             </div>
@@ -164,14 +166,7 @@
                                                         disabled>ممتلئ</button>
                                                 </div>
                                             @endif
-                                            <!--
-                                                                <ul>
 
-                                                                    @foreach ($agency->volunteers as $v)
-    <li>{{ $v->user_name }}</li>
-    @endforeach
-                                                                </ul>
-                                                            -->
                                             </p>
 
                                         </div>

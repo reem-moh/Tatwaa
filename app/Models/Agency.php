@@ -10,6 +10,6 @@ class Agency extends Model
     use HasFactory;
 
     public function Volunteers(){
-        return $this->hasMany(Volunteer::class);
+        return $this->hasMany(Volunteer::class,'agency_id');
     }
 }

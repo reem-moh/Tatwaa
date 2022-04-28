@@ -25,12 +25,24 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $agencies = Agency::whereHas('Volunteers', function($q) {
+            $q->where('user_id', auth()->user()->id);
+        })->get();//->toArray()
+        return view('profile',[
+            'agencies' => $agencies
+        ]);
     }
 
     public function profile()
     {
-        return view('profile');
+        
+        $agencies = Agency::whereHas('Volunteers', function($q) {
+            $q->where('user_id', auth()->user()->id);
+        })->get();//->toArray()
+
+        return view('profile',[
+            'agencies' => $agencies
+        ]);
     }
 
     public function agency($agencyId, $agencyName, $agencyDesc)

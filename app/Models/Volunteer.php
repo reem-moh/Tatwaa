@@ -10,7 +10,7 @@ class Volunteer extends Model
     use HasFactory;
 
     public function Agencies(){
-        return $this->hasMany(Agency::class,'agency_id');
+        return $this->belongsTo(Agency::class);
     }
 
     public function User(){

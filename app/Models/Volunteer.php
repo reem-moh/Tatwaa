@@ -9,7 +9,7 @@ class Volunteer extends Model
 {
     use HasFactory;
 
-    public function Agencies(){
+    public function Agency(){
         return $this->belongsTo(Agency::class);
     }
 
